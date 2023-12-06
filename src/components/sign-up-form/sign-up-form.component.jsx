@@ -2,6 +2,7 @@ import {useState} from "react";
 
 import {createAuthUserWithEmailandPassword, createUserDocumentFromAuth} from "../../utils/firebase/firebase.utils";
 
+import FormInput from "../form-input/form-input.component";
 const defaultFormFields = {
     displayName: '',
     email: '',
@@ -59,32 +60,35 @@ const SignUpForm = () => {
         <div>
             <h1>Sign up with your email and password</h1>
             <form onSubmit={handleSubmit}>
-                <label>Display Name</label>
-                <input
+                
+                <FormInput
+                label={"DisplayName"}
                     type="text"
                     required
                     onChange={handleChange}
                     name="displayName"
-                    value={displayName}></input>
+                    value={displayName}></FormInput>
 
-                <label>Email</label>
-                <input type="email" required onChange={handleChange} name="email" value={email}></input>
+                
+                <FormInput label={"Email"} type="email" required onChange={handleChange} name="email" value={email}></FormInput>
 
-                <label>Password</label>
-                <input
+                
+                <FormInput
+                    label={"Password"}
                     type="password"
                     required
                     onChange={handleChange}
                     name="password"
-                    value={password}></input>
+                    value={password}></FormInput>
 
-                <label>Confirm Password</label>
-                <input
+                
+                <FormInput
+                label={"Confirm Password"}
                     type="password"
                     required
                     onChange={handleChange}
                     name="confirmPassword"
-                    value={confirmPassword}></input>
+                    value={confirmPassword}></FormInput>
 
                 <button type="submit">Sign Up</button>
             </form>
