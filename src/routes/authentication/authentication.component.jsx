@@ -4,7 +4,7 @@ import SignUpForm from "../../components/sign-up-form/sign-up-form.component";
 import FormInput from "../../components/form-input/form-input.component";
 
 import { useState } from "react";
-const SignIn = () => {
+const Authentication = () => {
 
 const defaultFormFields = {
     email: '',
@@ -33,4 +33,4 @@ const [formFields, setFormFields] = useState(defaultFormFields);
     )
 };
 
-export default SignIn;
+export default Authentication;
